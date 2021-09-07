@@ -90,6 +90,7 @@ log-facility=/var/log/dnsmasq.log
 ```
 
 之后执行ip a有结果如下：
+
 ![](img/6.png)
 
 - 3.攻击者kail-attacker配置
