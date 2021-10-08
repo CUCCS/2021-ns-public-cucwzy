@@ -247,7 +247,7 @@
 
   分析：Xmas发送TCP请求，在靶机端口被过滤状态下，靶机无响应，抓包结果与预期结果一致。
 
-- TCP fin scan
+## TCP fin scan
 - 在攻击者主机编写文件 TCPfin.py
   ```
   from scapy.all import *
